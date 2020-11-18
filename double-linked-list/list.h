@@ -2,12 +2,6 @@
 #define LIST_H
 #include <stdbool.h>
 
-struct bi_node {
-    int value;
-    struct bi_node *next;
-    struct bi_node *prev;
-};
-
 typedef struct bi_node *Bi_node;
 
 typedef struct bi_list {

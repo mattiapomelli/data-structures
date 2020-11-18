@@ -35,7 +35,7 @@ int main() {
                 scanf("%d", &n);
                 Node el = searchElement(l, n);
                 if(el != NULL) {
-                    printf("Found element with value %d\n", el -> value);
+                    printf("Element found\n");
                 } else {
                     printf("Element not found\n");
                 }

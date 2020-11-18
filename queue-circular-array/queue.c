@@ -2,6 +2,14 @@
 #include <stdlib.h>
 #include "queue.h"
 
+struct queue {
+	int *items;		
+	int maxsize;	
+	int front;		
+	int rear;		
+	int size;
+};
+
 Queue newQueue(int size) {
 	Queue q = malloc(sizeof(struct queue));
 	

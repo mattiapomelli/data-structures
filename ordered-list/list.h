@@ -2,11 +2,6 @@
 #define LIST_H
 #include <stdbool.h>
 
-struct node {
-    int value;
-    struct node *next;
-};
-
 typedef struct node *Node;
 
 typedef struct list {

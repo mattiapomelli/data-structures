@@ -2,6 +2,11 @@
 #include <stdlib.h>
 #include "stack.h"
 
+struct stack {
+    int elements[N];
+    int top;
+};
+
 Stack newStack() {
     Stack s = malloc( sizeof( struct stack) );
     s -> top = -1;

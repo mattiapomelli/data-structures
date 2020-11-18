@@ -2,6 +2,11 @@
 #include <stdlib.h>
 #include "list.h"
 
+struct node {
+    int value;
+    struct node *next;
+};
+
 List newList() {
     List l = malloc(sizeof(struct list));
     l -> first = NULL;

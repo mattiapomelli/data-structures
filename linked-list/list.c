@@ -2,6 +2,11 @@
 #include <stdlib.h>
 #include "list.h"
 
+struct node {
+    int value;
+    struct node *next;
+};
+
 Node addToHead(Node l, int n) {
     Node new_node = malloc( sizeof( struct node) );
     new_node -> value = n;

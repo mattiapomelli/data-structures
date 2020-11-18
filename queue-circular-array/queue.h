@@ -1,14 +1,6 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 
-struct queue {
-	int *items;		
-	int maxsize;	
-	int front;		
-	int rear;		
-	int size;
-};
-
 typedef struct queue *Queue;
 
 Queue newQueue(int size);

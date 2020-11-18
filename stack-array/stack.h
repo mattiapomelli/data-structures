@@ -4,11 +4,6 @@
 #include <stdbool.h>
 #define N 10
 
-struct stack {
-    int elements[N];
-    int top;
-};
-
 typedef struct stack *Stack;
 
 Stack newStack();

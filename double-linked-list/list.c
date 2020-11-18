@@ -2,6 +2,12 @@
 #include <stdio.h>
 #include "list.h"
 
+struct bi_node {
+    int value;
+    struct bi_node *next;
+    struct bi_node *prev;
+};
+
 Bi_list newList() {
     Bi_list l = malloc(sizeof(struct bi_list));
     l -> first = NULL;
