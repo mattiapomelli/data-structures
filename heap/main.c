@@ -13,7 +13,7 @@ int main() {
     printf("Lunghezza: %d \n", pqueue_length(q));
     printf("Minimo: %d \n", key(pqueue_min(q)));
 
-    pqueue_removeItem(q, 2);
+    pqueue_removeItem(q, 1);
     print_pqueue(q);
     printf("Lunghezza: %d \n", pqueue_length(q));
     printf("Minimo: %d \n", key(pqueue_min(q)));
