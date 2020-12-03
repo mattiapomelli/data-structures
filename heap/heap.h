@@ -1,9 +1,15 @@
 #ifndef HEAP_H
 #define HEAP_H
 
-typedef int Item;
+typedef int Key;
 
-typedef struct pqueue * Pqueue ;
+typedef struct item *Item;
+
+typedef struct pqueue * Pqueue;
+
+Item new_item(int);
+
+Key key(Item);
 
 // crea una coda di priorità vuota che potrà contenere al massimo n Item 
 Pqueue pqueue_new ( int n );

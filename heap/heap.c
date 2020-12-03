@@ -4,11 +4,9 @@
 
 // Per comodita usiamo gli indici della coda di priorita a partire da 1! Ignoriamo la posizione 0
 
-typedef int Key; 
-
-// typedef struct {
-//     Key n;
-// } Item;
+struct item {
+    Key key;
+};
 
 typedef Item *Heap;
 
@@ -16,6 +14,12 @@ struct pqueue {
     Heap h;
     int size, count;
 };
+
+Item new_item(int k) {
+    Item item = malloc(sizeof(struct item));
+    item -> key = k;
+    return item;
+} 
 
 // crea una coda di priorità vuota che potrà contenere al massimo n Item 
 Pqueue pqueue_new ( int n ) {
@@ -38,8 +42,8 @@ int right(int i) {
     return 2*i + 1;
 }
 
-Key key( Item i) {
-    return i;
+Key key( Item item) {
+    return item -> key;
 }
 
 int cmp( Key a, Key b) {
@@ -50,7 +54,7 @@ int cmp( Key a, Key b) {
 }
 
 void swap( Heap h, int i, int j) {
-    int temp = h[i];
+    Item temp = h[i];
     h[i] = h[j];
     h[j] = temp;
 }
@@ -130,6 +134,7 @@ Item pqueue_min ( Pqueue q ) {
 void print_pqueue( Pqueue q ) {
     Heap heap = q -> h;
     for(int i = 1; i < q -> count; i++) {
-        printf("%d ", heap[i]);
+        printf("%d ", key(heap[i]));
     }
 }
+
